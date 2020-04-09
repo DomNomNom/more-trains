@@ -3,7 +3,7 @@
 local beltSpeedMultiplier = 0.25
 local beltLikeGroups = {'transport-belt', 'underground-belt', 'splitter'}
 for _, groupName in ipairs(beltLikeGroups) do
-    for _, entityKind in ipairs(data.raw[groupName]) do
+    for _, entityKind in pairs(data.raw[groupName]) do
         entityKind.speed = entityKind.speed * beltSpeedMultiplier
     end
 end
@@ -75,18 +75,13 @@ end
 
 local technology = data.raw['technology']
 technology['railway'].prerequisites = {}  --'basic-electronics'
--- technology['railway'].enabled = true
-technology['railway'].order = 'a-f-a'
-for _,techName in ipairs({'railway','automated-rail-transportation','rail-signals'}) do 
+technology['automated-rail-transportation'].prerequisites = {'railway', 'optics'}
+for _,techName in ipairs({'railway','automated-rail-transportation','rail-signals', 'optics'}) do 
     technology[techName].unit.count = 1
     technology[techName].unit.ingredients = {{"automation-science-pack", 1}}
 end
 
 -- ---------- Define new entities ----------
-
--- local protomotive = table.deepcopy(locomotive)
--- protomotive.name = 'protomotive'
-
 
 -- -- Register new entities
 -- data:extend({

@@ -1,9 +1,9 @@
 {
 	"name": "more-trains", 
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"title": "More Trains",
 	"author": "DomNomNom",
 	"factorio_version": "0.18", 
-	"contact": "github.com/domnomnom", 
-	"description": "Faster trains with less capacity. Slower belts."
+	"contact": "https://github.com/DomNomNom/more-trains", 
+	"description": "Encourages you to build more trains with faster trains with less capacity and slower belts."
 }
