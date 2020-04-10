@@ -1,4 +1,3 @@
-
 ---------- Buff/nerf existing trains/belts ----------
 local beltSpeedMultiplier = 0.25
 local beltLikeGroups = {'transport-belt', 'underground-belt', 'splitter'}
@@ -36,8 +35,8 @@ recipe['cargo-wagon'].ingredients = {
     {'iron-stick', 5},
 }
 recipe['rail'].ingredients = {
-    {'stone', 4},
-    {'iron-stick', 4},
+    {'stone', 2},
+    {'iron-stick', 2},
 }
 recipe['train-stop'].ingredients = {
     {'iron-plate', 5},
