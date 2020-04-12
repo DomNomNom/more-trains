@@ -77,7 +77,7 @@ end
 ---------- Allow cheap researching automated trains without further dependency ----------
 
 local technology = data.raw['technology']
-technology['railway'].prerequisites = {}  --'basic-electronics'
+technology['railway'].prerequisites = {}
 technology['automated-rail-transportation'].prerequisites = {'railway', 'optics'}
 for _,techName in ipairs({'railway','automated-rail-transportation','rail-signals', 'optics'}) do 
     technology[techName].unit.count = 1
