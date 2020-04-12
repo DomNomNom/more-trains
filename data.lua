@@ -83,10 +83,3 @@ for _,techName in ipairs({'railway','automated-rail-transportation','rail-signal
     technology[techName].unit.count = 1
     technology[techName].unit.ingredients = {{"automation-science-pack", 1}}
 end
-
--- ---------- Define new entities ----------
-
--- -- Register new entities
--- data:extend({
---     protomotive,
--- })
