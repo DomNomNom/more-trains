@@ -19,7 +19,7 @@ cargoWagon.inventory_size = cargoWagon.inventory_size * trainCargoMultiplier
 fluidWagon.capacity = fluidWagon.capacity * trainCargoMultiplier
 
 
----------- Adjust recipes to remove the dependence on steel and encourage automation ----------
+---------- Adjust recipes to remove the dependence on steel and encourage early trains ----------
 
 local recipe = data.raw.recipe
 recipe['locomotive'].ingredients = {
@@ -59,6 +59,10 @@ recipe['rail-chain-signal'].ingredients = {
     {'electronic-circuit', 1},
     {'iron-plate', 1},
 }
+-- Discourage over-use of inserters.
+for _,ingredient in pairs(recipe['fast-inserter'].ingredients) do
+    ingredient[2] = 2 * ingredient[2]
+end
 
 -- Encourage things to be automated by increasing crafting time
 local railwayCraftingMultiplier = 4
